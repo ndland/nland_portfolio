@@ -1,18 +1,14 @@
 import React from "react";
-import { useBoolean } from "@chakra-ui/react";
-import "./Home.css";
+import { Button } from "@chakra-ui/react";
 
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
-  const [flag, setFlag] = useBoolean();
-
   return (
     <>
-      <p>Boolean state: {flag.toString()}</p>
-      <button onClick={setFlag.toggle}>
-        Click me to toggle the boolean value
-      </button>
+      <Button colorScheme="teal" size="xs">
+        Button
+      </Button>
     </>
   );
 };
