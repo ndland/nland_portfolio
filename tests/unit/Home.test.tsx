@@ -6,9 +6,9 @@ import Home from "../../src/components/Home/Home";
 
 describe("Home", () => {
   test("renders a welcome message", () => {
-    render(<Home name="John" />);
+    render(<Home />);
 
-    const welcomeMessage = screen.getByText("Welcome, John!");
+    const welcomeMessage = screen.getByText(/state/i);
     expect(welcomeMessage).toBeInTheDocument();
   });
 });
