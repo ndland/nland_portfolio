@@ -1,11 +1,7 @@
 import Home from "./components/Home/Home.tsx";
 
 function App() {
-  return (
-    <>
-      <Home />
-    </>
-  );
+  return <Home />;
 }
 
 export default App;

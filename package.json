@@ -17,10 +17,6 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "framer-motion": "^10.17.9",
     "jsdom": "^23.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -41,6 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -48,9 +45,11 @@
     "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
+    "postcss": "^8.4.33",
     "prettier": "3.1.1",
     "standard-version": "^9.5.0",
     "storybook": "^7.6.7",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vitest": "^1.1.2"
@@ -62,7 +61,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "npm run test",
+      "yarn test",
       "eslint --fix",
       "prettier --write --ignore-unknown"
     ]
