@@ -5,7 +5,7 @@ interface HomeProps {}
 const Home: React.FC<HomeProps> = () => {
   return (
     <>
-      <div className="text-violet-400 font-semibold text-2xl">HI</div>
+      <div className="text-red-400 font-semibold text-2xl">HI</div>
     </>
   );
 };
