@@ -7,7 +7,7 @@ describe("Home", () => {
   test("renders a welcome message", () => {
     render(<Home />);
 
-    const welcomeMessage = screen.getByText(/hi/i);
+    const welcomeMessage = screen.getByText(/hello/i);
     expect(welcomeMessage).toBeInTheDocument();
   });
 });

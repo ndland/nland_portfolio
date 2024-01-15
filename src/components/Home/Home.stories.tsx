@@ -11,7 +11,5 @@ export default meta;
 type Story = StoryObj<typeof Home>;
 
 export const FirstStory: Story = {
-  args: {
-    name: "John",
-  },
+  args: {},
 };
