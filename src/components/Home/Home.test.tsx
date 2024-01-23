@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import { describe, expect, test } from "vitest";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { it, describe, expect, test, vi } from "vitest";
 import Home from "./Home";
 
 describe("Home", () => {
@@ -9,5 +9,14 @@ describe("Home", () => {
 
     const welcomeMessage = screen.getByText(/hello/i);
     expect(welcomeMessage).toBeInTheDocument();
+  });
+
+  it("calls the onClick handler when the button is clicked", () => {
+    const handleClick = vi.fn();
+    render(<Home onClick={handleClick} />);
+
+    fireEvent.click(screen.getByTestId("arrow"));
+
+    expect(handleClick).toHaveBeenCalled();
   });
 });
